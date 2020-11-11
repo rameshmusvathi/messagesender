@@ -32,8 +32,8 @@ jobs:
       - name: 'Run code'
         run: node emailsender.js
         env:
-          userName: ${{ secrets.GMAILUSER }}
-          passWord: ${{ secrets.GMAILPASSWORD }}
+          GMAILUSER: ${{ secrets.GMAILUSER }}
+          GMAILPASS: ${{ secrets.GMAILPASSWORD }}
           
 
 
