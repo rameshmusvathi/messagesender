@@ -23,8 +23,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: 'Install node'
         uses: actions/setup-node@v1
-      - name: 'initialise npm for package.json file'
-        run: npm init
       - name: 'Install NPM dependencies'
         run: npm install  
       - name: 'install node mailer'
