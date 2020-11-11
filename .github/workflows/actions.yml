@@ -21,8 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: 'Install node'
-        uses: actions/setup-node@v1
       - name: 'Install NPM dependencies'
         run: npm install
       # Runs a single command using the runners shell
