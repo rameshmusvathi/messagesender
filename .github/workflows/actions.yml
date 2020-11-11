@@ -7,7 +7,7 @@ name: CI
 on:
   push:
   schedule:
-    - cron: '0? ** * * *'
+    - cron: '* * * * *'
     
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -27,7 +27,7 @@ jobs:
         uses: npm install
       # Runs a single command using the runners shell
       - name: Run codet
-        run: node index.js
+        run: node emailsender.js
 
 
     
