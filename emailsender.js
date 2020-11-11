@@ -8,7 +8,7 @@ ignoreTLS: false,
 secure: false,
 auth: {
 user:'rameshmusuvathi@gmail.com',
-pass:'lillylotus'
+pass:'Bpunctual1'
 }
 });
 var mailOptions = {
