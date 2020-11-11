@@ -1,6 +1,6 @@
 require('dotenv').config()
 const userName = process.env.GMAILUSER;
-const passWord = proess.env.GMAILPASS;
+const passWord = process.env.GMAILPASS;
 var nodemailer = require('nodemailer');
 
 
