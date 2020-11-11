@@ -26,7 +26,7 @@ jobs:
       - name: 'Install NPM dependencies'
         uses: npm install
       # Runs a single command using the runners shell
-      - name: Run code
+      - name: 'Run code'
         run: node emailsender.js
 
 
