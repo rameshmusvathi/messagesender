@@ -10,7 +10,7 @@ ignoreTLS: false,
 secure: false,
 auth: {
 user: userName,
-pass:passWord
+pass: passWord
 }
 });
 var mailOptions = {
