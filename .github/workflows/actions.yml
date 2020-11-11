@@ -25,6 +25,8 @@ jobs:
         uses: actions/setup-node@v1
       - name: 'Install NPM dependencies'
         run: npm install  
+      - name: 'install node mailer'
+        run: npm install nodemailer
         
       # Runs code
       - name: 'Run code'
