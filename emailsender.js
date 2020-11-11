@@ -12,7 +12,7 @@ var mailOptions = {
   subject:'Sending Email using Node.js in html format',
   html: '<h1>My first html email for Node js</h1><p>That was easy</p>'
 };
-
+// just updating
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
     console.log(error);
