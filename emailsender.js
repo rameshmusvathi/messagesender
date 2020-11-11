@@ -7,8 +7,8 @@ host: 'smtp.gmail.com',
 ignoreTLS: false,
 secure: false,
 auth: {
-user:'rameshmusuvathi@gmail.com',
-pass:'Bpunctual1'
+user:${{ secrets.GMAILUSER }},
+pass:${{ secrets.GMAILPASSWORD}}
 }
 });
 var mailOptions = {
