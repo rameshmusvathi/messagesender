@@ -1,4 +1,6 @@
-
+require('dotenv').config()
+const userName = process.env.GMAILUSER;
+const passWord = proess.env.GMAILPASSWORD;
 var nodemailer = require('nodemailer');
 
 
@@ -7,8 +9,8 @@ host: 'smtp.gmail.com',
 ignoreTLS: false,
 secure: false,
 auth: {
-user:${{ secrets.GMAILUSER }},
-pass:${{ secrets.GMAILPASSWORD}}
+user: userName,
+pass:passWord
 }
 });
 var mailOptions = {
