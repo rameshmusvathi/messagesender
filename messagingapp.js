@@ -32,32 +32,6 @@ const main = async () => {
 }
 
 
-  var nodemailer = require('nodemailer');
-  var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  ignoreTLS: false,
-  secure: false,
-  auth: {
-  user: userName,
-  pass: passWord
-  }
-    });
-  var mailOptions = {
-  from:'rameshmusuvathi@gmail.com',
-  to:'mails2kirupa@gmail.com',
-  subject:'Weather in Singapore',
-  text: weatherString
-  };
-  // send email via gmail
-  transporter.sendMail(mailOptions, function(error, info){
-   if (error) {
-    console.log(error);
-   } else {
-    console.log('Email sent: ' + info.response);
-   }
-  });
- 
-  
 
 //updating to check
   
