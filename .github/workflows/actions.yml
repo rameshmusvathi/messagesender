@@ -41,6 +41,7 @@ jobs:
           GMAILPASS: ${{ secrets.GMAILPASSWORD }}
           TELEGRAMCHATID: ${{secrets.TELEGRAM_CHAT_ID}}
           TELEGRAMTOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          WEATHERTOKEN: ${{secrets.WEATHER_API_TOKEN}}
           
 
 
