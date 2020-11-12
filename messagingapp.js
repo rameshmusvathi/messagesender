@@ -26,5 +26,5 @@ fetch(
             console.log(`It's currently ${temperature}°C `);
         })
         .catch(console.log(`Error: ${err}`));
-})();
+
 
