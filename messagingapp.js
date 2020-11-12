@@ -25,7 +25,7 @@ fetch(
             const name = data.name;
             
   
-            bot.on('message', (msg)=>{const telegramChatid = msg.chat.id; bot.sendMessage(telegramChatid, 'Messengingjs file push/pull in messagesender repo')})
+            bot.on('message', (msg)=>{const telegramChatid = msg.chat.id; bot.sendMessage(telegramChatid, "Messengingjs file push/pull in messagesender repo")})
             console.log(`Today's forecast for ${name}: ${forecast}`);
             console.log(`Current temperature in ${name} is ${temperature}°C `);
     
@@ -43,7 +43,7 @@ fetch(
             from:'rameshmusuvathi@gmail.com',
             to:'mails2kirupa@gmail.com',
             subject:'Weather in Singapore',
-            html: '<h1 value="<%document.getElementById("pid").innerHTML=name%>">${name}</h1><p id="pid">That was easy</p>'
+            html: '<h1 This mail from Github</h1><p id="pid" value="<%document.getElementById("pid").innerHTML=name%>>That was easy</p>'
              };
             // send email via gmail
              transporter.sendMail(mailOptions, function(error, info){
