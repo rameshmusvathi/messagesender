@@ -27,6 +27,8 @@ jobs:
         run: npm install  
       - name: 'install node mailer'
         run: npm install nodemailer
+      - name: 'Install node telegram bot'
+        run: npm install --save node-telegram-bot-api
       - name: 'install dotenv'
         run: npm install dotenv
 
