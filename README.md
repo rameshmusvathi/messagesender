@@ -6,7 +6,9 @@
 
 ### The code uses secret environment variable to store sender's username and password
 
-## Github Actions.yml file has the code to run the messagingapp.js file when the file is pushed/pulled in to the repository
+### Github Actions.yml file has the code to run the messagingapp.js file when the file is pushed/pulled in to the repository.Simply making changes and committing the messagingapp.js file will trigger the actions and we can see an email sent and also on the run window the weather in Singapore.
+
+### Weather data in Singapore is received via API from Openweather site.
 
 
 ![email CI](https://github.com/rameshmusvathi/PersonalNodeJStraining/workflows/email%20CI/badge.svg)
