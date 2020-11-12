@@ -25,6 +25,6 @@ fetch(
             console.log(`Today's forecast for ${name}: ${forecast}`);
             console.log(`It's currently ${temperature}°C `);
         })
-        .catch(console.log(`Error: ${err}`));
+        .catch((err) => console.log(err));
 
 
