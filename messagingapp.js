@@ -7,7 +7,7 @@ const passWord = process.env.GMAILPASS;
 const telegramChatid=process.env.TELEGRAMCHATID;
 const telegramToken = process.env.TELEGRAMTOKEN;
 const weatherToken = process.env.WEATHERTOKEN;
-const weatherMessage =''
+
 
 const Telegram = require('node-telegram-bot-api');
 const bot = new Telegram(process.env.TELEGRAMTOKEN, {polling:true});
@@ -30,7 +30,6 @@ const getWeatherData = async () => {
   // bot.on('message', (msg) => {
   // const telegramChatid = msg.chat.id;
   // bot.sendMessage(telegramChatid, weatherMessage) });
-  }
   var nodemailer = require('nodemailer');
   var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -55,6 +54,8 @@ const getWeatherData = async () => {
     console.log('Email sent: ' + info.response);
    }
   });
+  }
+  
 
 //updating to check
   
