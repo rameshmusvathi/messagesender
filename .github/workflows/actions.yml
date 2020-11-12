@@ -32,11 +32,13 @@ jobs:
 
         
       # Runs code
-      - name: 'Run code'
+      - name: 'Run email code'
         run: node emailsender.js
         env:
           GMAILUSER: ${{ secrets.GMAILUSER }}
           GMAILPASS: ${{ secrets.GMAILPASSWORD }}
+          TELEGRAMCHATID: ${{secrets.TELEGRAM_CHAT_ID}}
+          TELEGRAMTOKEN: ${{secrets.TELEGRAM_TOKEN}}
           
 
 
