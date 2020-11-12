@@ -49,11 +49,12 @@ const getWeatherData = async () => {
    } else {
     console.log('Email sent: ' + info.response);
    }
-});
+  });
 
   bot.on('message', (msg) => {
   const telegramChatid = msg.chat.id;
-  bot.sendMessage(telegramChatid, weatherMessage) });
+  bot.sendMessage(telegramChatid, "weatherMessage") });
+  
   }
 
 main()
