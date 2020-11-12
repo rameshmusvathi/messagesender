@@ -51,7 +51,7 @@ const getWeatherData = async () => {
    }
   });
 
-  bot.on('message', (msg) => {
+  bot.on('message', function(msg) => {
   const telegramChatid = msg.chat.id;
   bot.sendMessage(telegramChatid, "weatherMessage") });
   
