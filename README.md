@@ -11,4 +11,4 @@
 
 ![email CI](https://github.com/rameshmusvathi/PersonalNodeJStraining/workflows/email%20CI/badge.svg)
 ![notify CI](https://github.com/rameshmusvathi/PersonalNodeJStraining/workflows/notify%20CI/badge.svg)
-# Badge Maker [!(https://img.shields.io/badge/try%20it-on%20telegram-0088cc.svg)](http://t.me/badgemakerbot)
+![Telegram](https://img.shields.io/badge/try%20it-on%20telegram-0088cc.svg)
