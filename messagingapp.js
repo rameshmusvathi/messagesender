@@ -22,7 +22,7 @@ fetch(
             const forecast = data.weather[0].description;
             const temperature = data.main.temp;
             const name = data.name;
-            bot.sendMessage(process.env.TELEGRAM_CHAT_ID, "Some one push/pull file in messagesender repo")
+            bot.sendMessage(process.env.TELEGRAMCHATID, "Some one push/pull file in messagesender repo")
             console.log(`Today's forecast for ${name}: ${forecast}`);
             console.log(`Current temperature in ${name} is ${temperature}°C `);
         })
