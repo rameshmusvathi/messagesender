@@ -7,10 +7,10 @@ name: notify CI
 on:
   push:
     branches:
-    - main
+    - master
   pull_request:
     branches:
-    - main
+    - master
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
