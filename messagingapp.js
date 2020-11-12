@@ -22,7 +22,7 @@ fetch(
             const forecast = data.weather[0].description;
             const temperature = data.main.temp;
             const name = data.name;
-            bot.sendMessage(process.env.TELEGRAMCHATID, " Messengrjs file push/pull in messagesender repo")
+            bot.on('message', (msg)=>{bot.sendMessage(msg.chat.id, " Messengingjs file push/pull in messagesender repo")})
             console.log(`Today's forecast for ${name}: ${forecast}`);
             console.log(`Current temperature in ${name} is ${temperature}°C `);
         })
