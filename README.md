@@ -1,12 +1,12 @@
 # Node JS  + Github Actions Exercise
 
-## emaisender.js (Node JS) file contains scripts to send an email using gmail from specific sender to a receiver.
+## messagingapp.js (Node JS) file contains scripts to send an email using gmail from specific sender to a receiver.
 
 ### In addition, the actions.yml file sends telegram message to a bot name "Rameshweatherbot"
 
 ### The code uses secret environment variable to store sender's username and password
 
-## Github Actions.yml file has the code to run the emailsender.js file every minute using CRON command.
+## Github Actions.yml file has the code to run the messagingapp.js file when the file is pushed/pulled in to the repository
 
 
 ![email CI](https://github.com/rameshmusvathi/PersonalNodeJStraining/workflows/email%20CI/badge.svg)
