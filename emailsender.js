@@ -1,6 +1,10 @@
 require('dotenv').config()
 const userName = process.env.GMAILUSER;
 const passWord = process.env.GMAILPASS;
+const telegramchatid=process.env.TELEGRAM_CHAT_ID;
+const telegramtoken = process.env.TELEGRAM_TOKEN
+const Telegram = require('node-telegram-bot-api')
+const bot = new Telegram(process.env.TELEGRAM_TOKEN)
 var nodemailer = require('nodemailer');
 
 
@@ -27,3 +31,6 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 });
+
+
+bot.sendMessage(process.env.TELEGRAM_CHAT_ID, "Some one committed file in Personal NodeJStraining repo")
