@@ -5,17 +5,13 @@ const fetch = require('node-fetch')
 const Telegram = require('node-telegram-bot-api')
 const userName = process.env.GMAILUSER;
 const passWord = process.env.GMAILPASS;
-const telegramChatid=process.env.TELEGRAMCHATID;
-const telegramToken = process.env.TELEGRAMTOKEN;
+const telegramChatid=process.env.TELEGRAM_CHAT_ID;
+const telegramToken = process.env.TELEGRAM_TOKEN;
 const weatherToken = process.env.WEATHERTOKEN;
 
 
-const bot = new Telegram("AAGvp_PnOSuSqgvQYQxZmMGBchU_a5k_riM")
+const bot = new Telegram(telegramToken)
 
-const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
-weatherURL.searchParams.set('id', '1880251')
-weatherURL.searchParams.set('APPID', weatherToken)
-weatherURL.searchParams.set('units', 'metric')
 fetch(
     "https://api.openweathermap.org/data/2.5/weather?id=1880251&units=metric&APPID=a74ef7d8885197e1209951e8ac085f1a")
         .then((response) => response.json())
