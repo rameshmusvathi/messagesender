@@ -26,6 +26,7 @@ const getWeatherData = async () => {
   const main = async () => {
   const weatherData = await getWeatherData()
   const weatherMessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
+  }
   var nodemailer = require('nodemailer');
   var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -55,8 +56,6 @@ const getWeatherData = async () => {
   const telegramChatid = msg.chat.id;
   bot.sendMessage(telegramChatid, "weatherMessage") });
   
-  }
-
 main()
 
 
