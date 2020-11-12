@@ -27,35 +27,6 @@ const getWeatherData = async () => {
   const weatherData = await getWeatherData()
   const weatherMessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
   console.log(weatherMessage)
-  });
-  var nodemailer = require('nodemailer');
-  var transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  ignoreTLS: false,
-  secure: false,
-  auth: {
-  user: userName,
-  pass: passWord
-  }
-    });
-  var mailOptions = {
-  from:'rameshmusuvathi@gmail.com',
-  to:'mails2kirupa@gmail.com',
-  subject:'Weather in Singapore',
-  html: '<h1>weatherMessage</h1><p>That was easy</p>'
-  };
-  // send email via gmail
-  transporter.sendMail(mailOptions, function(error, info){
-   if (error) {
-    console.log(error);
-   } else {
-    console.log('Email sent: ' + info.response);
-   }
-
-
-  bot.on('message', (msg) => {
-  const telegramChatid = msg.chat.id;
-  bot.sendMessage(telegramChatid, "Someone pushed message") });
-  }
+    }
 
 main()
