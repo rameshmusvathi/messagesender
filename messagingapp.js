@@ -9,7 +9,7 @@ const telegramToken = process.env.TELEGRAMTOKEN;
 const weatherToken = process.env.WEATHERTOKEN;
 
 const Telegram = require('node-telegram-bot-api');
-const bot = new Telegram(process.env.TELEGRAMTOKEN, {polling:true);
+const bot = new Telegram(process.env.TELEGRAMTOKEN, {polling:true});
 
 const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
 weatherURL.searchParams.set('id', '1880251')
