@@ -26,7 +26,8 @@ const getWeatherData = async () => {
 
   const main = async () => {
   const weatherData = await getWeatherData()
-  const weatherMessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
+  const weathermessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
+  // const weatherMessage = 'The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
   // bot.on('message', (msg) => {
   // const telegramChatid = msg.chat.id;
   // bot.sendMessage(telegramChatid, weatherMessage) });
