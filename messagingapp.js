@@ -7,6 +7,7 @@ const passWord = process.env.GMAILPASS;
 const telegramChatid=process.env.TELEGRAMCHATID;
 const telegramToken = process.env.TELEGRAMTOKEN;
 const weatherToken = process.env.WEATHERTOKEN;
+const weatherMessage =''
 
 const Telegram = require('node-telegram-bot-api');
 const bot = new Telegram(process.env.TELEGRAMTOKEN, {polling:true});
@@ -25,7 +26,7 @@ const getWeatherData = async () => {
 
   const main = async () => {
   const weatherData = await getWeatherData()
-  const weatherMessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
+  weatherMessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
   // bot.on('message', (msg) => {
   // const telegramChatid = msg.chat.id;
   // bot.sendMessage(telegramChatid, weatherMessage) });
@@ -44,7 +45,7 @@ const getWeatherData = async () => {
   from:'rameshmusuvathi@gmail.com',
   to:'mails2kirupa@gmail.com',
   subject:'Weather in Singapore',
-  html: '<a href="'+ weatherMessage +'">'+userName+'</a>'
+  text: weatherMessage
   };
   // send email via gmail
   transporter.sendMail(mailOptions, function(error, info){
