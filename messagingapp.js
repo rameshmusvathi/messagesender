@@ -15,7 +15,8 @@ const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
 weatherURL.searchParams.set('id', '1880251')
 weatherURL.searchParams.set('APPID', weatherToken)
 weatherURL.searchParams.set('units', 'metric')
-fetch(weatherURL.toString())
+fetch(
+    "https://api.openweathermap.org/data/2.5/weather?id=1880251&units=metric&APPID=a74ef7d8885197e1209951e8ac085f1a")
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
