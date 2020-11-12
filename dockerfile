@@ -1,4 +1,4 @@
-FROM ubuntu latest
+FROM ubuntu:latest
 MAINTAINER rameshmusuvathi@gmail.com
 RUN apt-get -y update
 RUN apt-get -y upgrade
