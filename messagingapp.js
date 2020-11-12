@@ -27,5 +27,6 @@ fetch(
             console.log(`Current temperature in ${name} is ${temperature}°C `);
         })
         .catch((err) => console.log(err));
+process.exit;
 
 
