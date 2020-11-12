@@ -44,7 +44,7 @@ const getWeatherData = async () => {
   from:'rameshmusuvathi@gmail.com',
   to:'mails2kirupa@gmail.com',
   subject:'Weather in Singapore',
-  text: weatherMessage
+  text: {{weatherMessage}}
   };
   // send email via gmail
   transporter.sendMail(mailOptions, function(error, info){
