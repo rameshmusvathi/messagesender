@@ -31,13 +31,7 @@ const main = async () => {
   bot.sendMessage(process.env.TELEGRAM_CHAT_ID, weatherString)
 }
 
-  // const main = async () => {
-  //const weatherData = await getWeatherData()
-  // const weathermessage = `The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
-  // const weatherMessage = 'The weather in ${weatherData.name}: ${weatherData.weather[0].description}. Current temperature is ${weatherData.main.temp} degree celsius, with a low temp of ${weatherData.main.temp_min} degree celsius and high of ${weatherData.main.temp_max} degree celsius.`
-  // bot.on('message', (msg) => {
-  // const telegramChatid = msg.chat.id;
-  // bot.sendMessage(telegramChatid, weatherMessage) });
+
   var nodemailer = require('nodemailer');
   var transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -62,7 +56,7 @@ const main = async () => {
     console.log('Email sent: ' + info.response);
    }
   });
-  }
+ 
   
 
 //updating to check
