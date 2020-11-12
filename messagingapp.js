@@ -15,17 +15,9 @@ const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
 weatherURL.searchParams.set('id', '1880251')
 weatherURL.searchParams.set('APPID', weatherToken)
 weatherURL.searchParams.set('units', 'metric')
-
-const getWeatherData = async () => {
-  const resp = await fetch(weatherURL.toString())
-  const body = await resp.json()
-  return body
-}
+fetch(weatherURL.toString())
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
 
 
-  const main = async () => {
-  const weatherData = await getWeatherData()
-  console.log("weather data")
-    }
-
-main()
