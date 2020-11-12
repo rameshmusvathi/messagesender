@@ -43,7 +43,7 @@ fetch(
             from:'rameshmusuvathi@gmail.com',
             to:'mails2kirupa@gmail.com',
             subject:'Weather in Singapore',
-            html: '<h1 This mail from Github</h1><p>That was easy. `Today's forecast for ${name}: ${forecast}`</p>'
+            html: '<h1 This mail from Github</h1><p>That was easy. `Today forecast for ${name}: ${forecast}`</p>'
              };
             // send email via gmail
              transporter.sendMail(mailOptions, function(error, info){
