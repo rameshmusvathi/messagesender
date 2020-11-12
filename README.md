@@ -10,3 +10,4 @@
 
 
 ![email CI](https://github.com/rameshmusvathi/PersonalNodeJStraining/workflows/email%20CI/badge.svg)
+![notify CI](https://github.com/rameshmusvathi/PersonalNodeJStraining/workflows/notify%20CI/badge.svg)
