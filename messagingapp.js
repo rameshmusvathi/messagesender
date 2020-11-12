@@ -17,7 +17,14 @@ weatherURL.searchParams.set('APPID', weatherToken)
 weatherURL.searchParams.set('units', 'metric')
 fetch(
     "https://api.openweathermap.org/data/2.5/weather?id=1880251&units=metric&APPID=a74ef7d8885197e1209951e8ac085f1a")
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err)); 
+        .then((response) => response.json())
+        .then((data) => {
+            const forecast = data.weather[0].description;
+            const temperature = data.main.temp;
+            const name = data.name;
+            console.log(`Today's forecast for ${name}: ${forecast}`);
+            console.log(`It's currently ${temperature}°C `);
+        })
+        .catch(console.log(`Error: ${err}`));
+})();
 
