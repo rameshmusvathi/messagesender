@@ -10,7 +10,7 @@ const telegramToken = process.env.TELEGRAMTOKEN;
 const weatherToken = process.env.WEATHERTOKEN;
 
 
-const bot = new Telegram(process.env.TELEGRAMTOKEN)
+const bot = new Telegram(process.env.TELEGRAMTOKEN, {polling:true})
 
 const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
 weatherURL.searchParams.set('id', '1880251')
@@ -25,7 +25,7 @@ fetch(
             const name = data.name;
             
   
-            bot.on('message', (msg)=>{const telegramChatid = msg.chat.id; bot.sendMessage(telegramChatid, "Messengingjs file push/pull in messagesender repo")})
+            bot.on('message', (msg)=>{const telegramChatid = msg.chat.id; bot.sendMessage(telegramChatid, "Messagingapp js file push/pull in messagesender repo")})
             console.log(`Today's forecast for ${name}: ${forecast}`);
             console.log(`Current temperature in ${name} is ${temperature}°C `);
     
