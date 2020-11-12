@@ -23,9 +23,36 @@ fetch(
             const forecast = data.weather[0].description;
             const temperature = data.main.temp;
             const name = data.name;
-            bot.on('text', (msg)=>{bot.sendMessage(telegramChatid, 'Messengingjs file push/pull in messagesender repo')})
+            
+  
+            bot.on('message', (msg)=>{const telegramChatid = msg.chat.id; bot.sendMessage(telegramChatid, 'Messengingjs file push/pull in messagesender repo')})
             console.log(`Today's forecast for ${name}: ${forecast}`);
             console.log(`Current temperature in ${name} is ${temperature}°C `);
+    
+            var nodemailer = require('nodemailer');
+            var transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            ignoreTLS: false,
+            secure: false,
+            auth: {
+            user: userName,
+            pass: passWord
+            }
+            });
+            var mailOptions = {
+            from:'rameshmusuvathi@gmail.com',
+            to:'mails2kirupa@gmail.com',
+            subject:'Weather in Singapore',
+            html: '<h1>${name}</h1><p>That was easy</p>'
+             };
+            // send email via gmail
+             transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                console.log(error);
+                } else {
+            console.log('Email sent: ' + info.response);
+            }
+            });
         })
         .catch((err) => console.log(err));
 process.exit;
